@@ -1,20 +1,16 @@
+<!DOCTYPE html>
 <body>
 
-  <% if @name %>
+  <% if @name != '' %>
     <h1 style='width:50%; display: block; margin-left: auto; margin-right: auto; border: 3px dashed blue; width:50%;'>My name is <%= @name%></h1>
+  <% else %>
+    <h1 style='width:50%; display: block; margin-left: auto; margin-right: auto; border: 3px dashed blue; width:50%;'>Please navigate back and enter something!!</h1>
   <% end %>
 
   <p style='width:50%; display: block; margin-left: auto; margin-right: auto; border: 3px dashed blue; width:50%;'><%= @rnd %></p>
 
   <div style='width:50%; display: block; margin-left: auto; margin-right: auto; border: 3px dashed blue; width:50%;'>
     <img style='width:100%;' src='http://www.planwallpaper.com/static/images/cool-wallpaper-1.jpg'>
-  </div>
-
-  <div style='width:50%; display: block; margin-left: auto; margin-right: auto; border: 3px dashed blue; width:50%;'>
-    <form action="/named-cat">
-      You name: <input type="text" name="name">
-      <input type="submit" value="Click me!">
-    </form>
   </div>
 
 </body>

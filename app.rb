@@ -5,19 +5,18 @@ get '/' do
   "#{a}"
 end
 
-get '/secret' do
-  "#{rand}"
-end
-
 get '/random-cat' do
   @rnd = rand
   @name = %w(Crap Poop Shit).sample
   erb :index
 end
 
-get '/named-cat' do
-  p params
+post '/named-cat' do
   @rnd = rand
   @name = params[:name]
   erb :index
+end
+
+get '/cat-form' do
+  erb :cat_form
 end
